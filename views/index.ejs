@@ -1,0 +1,36 @@
+
+<html lang="en">  
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <h1>Welcome <%= username %> </h1>
+    <div class="blogs">
+       <% if(blogs.length>0){ %>
+        <% blogs.forEach(function(blog){ %>
+            <a class=single href="/blogs/<%= blog._id %>">
+            <div class="blog">
+                <h2><%= blog.title %></h2>
+                <p><%= blog.snippet %></p>
+                <p><%= blog.body %></p>
+                <p><% 
+                    var date = new Date(blog.createdAt);
+                    var day = date.getDate();
+                    var month = date.getMonth() + 1; // Months are zero-based
+                    var year = date.getFullYear();
+                    var hours = date.getHours();
+                    var minutes = date.getMinutes();
+            
+                    var formattedDate = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + (day < 10 ? '0' : '') + day + '.' + (month < 10 ? '0' : '') + month + '.' + year;
+                %>
+                Author: <%= blog.username %>  ,  Date: <%= formattedDate %></p>
+            </div>
+            </a>            
+        <% }) %>
+        <% }else{ %>
+            <p>No blogs found</p>
+        <% } %>
+
+    </div>
+</html>

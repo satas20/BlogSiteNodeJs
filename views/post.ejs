@@ -1,0 +1,55 @@
+
+<html lang="en">  
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="blogs">
+        <div class="blog">
+            <h2><%= blog.title %></h2>
+            <p><%= blog.snippet %></p>
+            <p><%= blog.body %></p>
+            <p><% 
+                var date = new Date(blog.createdAt);
+                var day = date.getDate();
+                var month = date.getMonth() + 1; // Months are zero-based
+                var year = date.getFullYear();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+        
+                var formattedDate = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + (day < 10 ? '0' : '') + day + '.' + (month < 10 ? '0' : '') + month + '.' + year;
+            %>
+            Author: <%= blog.username %>  ,  Date: <%= formattedDate %>  </p>
+        </div>
+
+    </div>
+    <div class="makeComment">
+        <% if (user) { %>
+            <form action="/blogs/<%= blog._id %>/comments" method="POST">
+                <textarea name="text" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        <% } else { %>
+            <p>Log in to make a comment</p>
+        <% } %>
+    </div>
+    
+    <h2>Comments</h2>
+    <ul style="border-top: 1px solid;">
+    <% if(blog.comments.length>0){ %>
+    <% blog.comments.forEach(comment => { %>
+        <ul class="comments">
+            <div class="comment">
+                
+                <h3> <%= comment.text %></h3>
+                
+                <p> User:  <%= comment.username %> <%= comment.date.toDateString() %></p>
+            </div>
+        </ul>
+    <% }) %>
+    <% }else{ %>
+        <p>No comments found</p>
+    <% } %>
+</ul>   
+</html>

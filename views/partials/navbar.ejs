@@ -1,0 +1,19 @@
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+
+            <% if (user) { %>
+                <li><a href="/blogs/crate">New Blog</a></li>
+                <li>
+                    <form action="/logout" method="POST" class="logout-form">
+                        <button type="submit" class="logout-button">Logout</button>
+                    </form>
+                </li>
+            <% } else { %>
+                <li><a href="/login">Login</a></li>
+            <% } %>
+
+        </ul>
+    </nav>
+</div>

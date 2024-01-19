@@ -1,0 +1,27 @@
+<html>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/navbar.ejs") %>
+        <div class="crateBlog">
+            <form action="/blogs" method="POST">
+                <h1>Crate Blog</h1>
+                <div>
+                    <label for="title">Blog Title</label>
+                    <input type="text" name="title" placeholder="Title" required>
+                </div>
+                <div>
+                    <label for="snippet">Snippet</label>
+                    <input type="text" name="snippet" placeholder="Snippet" >
+                </div>
+                <div>
+                    <label for="body">Text</label>               
+                    <textarea name="body" id=body"" cols="50" rows="10"></textarea>
+                </div>
+                <button type="submit">crate</button>
+               
+        
+            </form>   
+        </div>
+
+    </body>
+</html>
