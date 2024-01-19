@@ -12,7 +12,7 @@ Bcyrpt. Authentication process is handeled using Express.Sessions.
 - `3. Comments` : Each blog post has comments.Authenticated users can add comments to blog posts. 
 
 ## Live Demo
-You can acces the deployment from this link: [Simpleblogsite/onrender](https://youtu.be/4zup_JkP7mA).
+You can acces the deployment from this link: [Simpleblogsite/onrender](https://simpleblogsite.onrender.com/blogs).
 
 # Preview 
 <h4 align="center">
