@@ -2,6 +2,7 @@
 This is a simple blog site created with Node.Js . I used MongoDB as database and Mongose for the conenction. Frontend  crated with EJS. Passwords are stored encyrpted using 
 Bcyrpt. Authentication process is handeled using Express.Sessions. 
 
+
 ## Features
 
 - `1. Authentication` : Users can register  and login/logout to the blog site .
@@ -12,6 +13,8 @@ Authenticated users can create blog posts. Each blog post includes a title, body
 
 - `3. Comments` : Each blog post has comments.Authenticated users can add comments to blog posts. 
 
+# Preview
+<img src="Media/gif1.gif" height= "500">
 
 # How to Run
 Install project dependencies:
