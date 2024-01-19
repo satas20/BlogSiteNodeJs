@@ -13,7 +13,14 @@ Authenticated users can create blog posts. Each blog post includes a title, body
 
 - `3. Comments` : Each blog post has comments.Authenticated users can add comments to blog posts. 
 
-# Preview
+# Preview 
+
+<h2 align="center">
+
+[For better quality video](https://youtu.be/4zup_JkP7mA)
+
+</h2>
+
 <img src="Media/gif1.gif" height= "500">
 
 # How to Run
