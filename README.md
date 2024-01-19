@@ -4,25 +4,26 @@ Bcyrpt. Authentication process is handeled using Express.Sessions.
 
 ## Features
 
-### Authentication Register and Login 
+- `1. Authentication` : Users can register  and login/logout to the blog site .
 
-Users can register  and login/logout to the blog site .
-
-### Blog Posts
+- `2. Blog Posts` :
 
 Authenticated users can create blog posts. Each blog post includes a title, body, and author.
 
-### Comments
-
-Authenticated users can add comments to blog posts. 
+- `3. Comments` : Each blog post has comments.Authenticated users can add comments to blog posts. 
 
 
+# How to Run
+Install project dependencies:
+```bash
+npm install
+```
+Run the project:
+```bash
+npm start
+```
+Navigate to your browser and go to the specified port in `index.js` (default: 3000).
+```
+http://localhost:3000
+```
 
-
-## Installation 
-
-Install my-project with npm
-
-```bash 
-    npm install my-project
-    cd my-project
